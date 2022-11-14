@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Very lame games in retro style</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+<header></header>
+<main class="flex-between">
+    <div class="slogan" >
+        <h1>Very <span>lame</span> games in <span>retro</span> style</h1>
+    </div>
+    <div class="boxes">
+        <div class="box">
+
+            <h2 class="box-title dotted">Rock Paper Scissors game</h2>
+
+            <div class="rps-choices">
+                <div class="user">
+                    <h2>User-choice:</h2>
+                    <span id="user-choice"></span>
+                </div>
+                <div class="computer">
+                    <h2>Computer Choice:</h2>
+                    <span id="computer-choice"></span>
+                </div>
+            </div>
+
+            <div class="rps-btn-box">
+                <button id="rock" class="rps-btn">rock</button>
+                <button id="paper" class="rps-btn">paper</button>
+                <button id="scissors" class="rps-btn">scissors</button>
+            </div>
+
+            <div class="rps-result-box">
+                <h2>Result: </h2>
+                <span id="rpsResult"></span>
+            </div>
+
+        </div>
+        <div class="box">
+            <h2 class="box-title">Guess a number <br><span class="dotted">between 1 and 10</span> </h2>
+            <div class="gan-interact">
+                <input id="gan-input" type="number" min="1" max="10" minlength="1" maxlength="2"></input>
+                <button class="gan-submit" onclick="getChiffreUser()">?</button>
+            </div>
+            <div class="gan-button">
+                <button id="more" class="remove-actif">more</button>
+                <button id="less" class="remove-actif">less</button>
+                <button id="won" class="remove-actif">you won !</button>
+                <button id="fool" class="remove-actif">you try to fool me, it's not working !</button>
+            </div>
+        </div>
+        <div class="box">
+            <h2 class="box-title">Teach your computer to say <br><span class="dotted">'Hello'</span> to you</h2>
+            <div class="hello-result-box">
+                <label >Your name :</label>
+                <input id="helloInput" name="your-name" maxlength="25" type="text"></input>
+                <button id="helloSubmit" class="hello-submit" onclick="getNameUser()">Go !</button>
+            </div>
+            <div class="hello-result-box">
+                <h2>Computer says :</h2>
+                <span id="helloResult"></span>
+            </div>
+        </div>
+        <div class="box box-inactive">
+            <h2 class="box-title">A <span>Memory</span> <br>is a work in progress here</h2>
+        </div>
+    </div>
+
+</main>
+<footer></footer>
+
+<script src="rock-paper-scissors.js" charset="utf-8"></script>
+<script src="guess-a-number.js" charset="utf-8"></script>
+<script src="hello.js" charset="utf-8"></script>
+</body>
+</html>

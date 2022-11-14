@@ -1,0 +1,427 @@
+html, body, main {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    opacity: 0.8;
+    font-family: 'Playfair Display', serif;
+    color: #141418;
+    background: #f5ddc7;
+    padding-top: 0;
+}
+
+/*
+colors:
+black: #141418;
+beige-1: #f5ddc7;
+beige-2: #f5ddc7;
+beige-3: #e8c190;
+fauve: #9f5010;
+yellowwhite : #f7ede5;
+
+*/
+
+header, footer {
+    width: 100%;
+    height: 40px;
+    background: #141418;
+    margin: 0;
+    z-index: 1;
+}
+
+.main {
+    height: 100vh;
+}
+
+ /*main et conteneur*/
+.flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.slogan, .boxes {
+    height: 100%;
+    /* alignement des éléments en haut*/
+    padding-top: 5%;
+}
+
+.slogan {
+    width: 25%; /* correspondances avec boxes, total 100%*/
+    height: 130vh;
+    background: #9f5010;
+    padding: 5% 5% 2% 2%;
+    z-index: -1;
+}
+
+.slogan h1{
+    font-size: 5rem;
+    font-weight: bold;
+    color: #f5ddc7;
+    margin: 0;
+}
+
+.slogan h1 span{
+    font-style: italic;
+    font-weight: 400;
+    text-decoration: underline dotted;
+    text-underline-offset: 0.8rem;
+    text-decoration-color: #141418;
+    text-decoration-thickness: 15px;
+}
+
+.boxes {
+    width: 75%;/* correspondances avec slogan, total 100% */
+    padding-left: 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 1400px) {
+    .flex-between {
+        display: flex;
+        justify-content: center;
+    }
+    .slogan {display: none}
+}
+
+@media (max-width: 1300px) {
+    .flex-between {
+        display: flex;
+        justify-content: center;
+    }
+    .slogan {display: none}
+    .boxes {
+        width: 80%;
+        height: 100%;
+    }
+    .box {
+        margin: 2% auto !important;
+    }
+}
+
+
+
+
+/*mes box*/
+.box {
+    width: 400px;
+    height: 400px;
+    background-color: #f7ede5;
+    opacity: 0.8;
+    background-size: 20px 20px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow:  0 0 100px rgba(0, 0, 0, 0.5);
+    margin: 2%;
+
+}
+
+.box-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1rem 0 2rem;
+}
+
+.dotted {
+    text-decoration: underline dotted;
+    text-underline-offset: 0.5rem;
+    text-decoration-color: #9f5010;
+    text-decoration-thickness: 6px;
+}
+
+/* -----------------------------le jeux 'rps' rock, paper, scissors*/
+.rps-choices {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rps-choices > div {
+    width: 180px;
+    height: 100px;
+    background: #f5ddc7;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.rps-choices > div> span {
+    font-size: 1.5rem;
+    font-style: italic;
+}
+
+.rps-choices> div> h2 {
+    font-size: 1rem
+}
+
+.user>span{
+    color: #9f5010;
+}
+
+.rps-btn-box {
+    width: 90%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rps-btn-box button{
+    width: 100px;
+    height: 30px;
+    font-size: 1rem;
+    color: #f5ddc7;
+    background: #141418;
+    border: #141418 1px solid;
+    border-radius: 30px;
+}
+
+.rps-result-box {
+    width: 85%;
+    margin: 2rem 1rem;
+}
+
+.rps-result-box h2 {
+    font-size: 1.2rem;
+}
+
+.rps-result-box span {
+    width: 100%;
+    height: 30px;
+    font-size: 1.5rem;
+    font-style: italic;
+    padding: .5rem 1rem;
+    display: block;
+    border-radius: 10px;
+    background: #f5ddc7;
+}
+
+
+/*----------------------------le 'gan' guess a number*/
+.gan-title {
+    font-size: 1rem;
+}
+
+.gan-interact {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 1.5rem;
+}
+
+.gan-interact > input {
+    width: 180px;
+    height: 150px;
+    background: #f5ddc7;
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+    font-family: serif;
+    color: #9f5010;
+    font-size: 4rem;
+}
+
+.gan-interact .gan-submit {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-block-start: 30px;
+    border-radius: 30px;
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    border: #141418;
+    background: #141418;
+    color: #f5ddc7;
+}
+
+.gan-button {
+    text-align: center;
+}
+
+.gan-button > button {
+    width: fit-content;
+    height: 30px;
+    padding: 5px 25px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #f5ddc7;
+    background: #141418;
+    border: #141418 1px solid;
+    border-radius: 30px;
+}
+
+.gan-button > button.actif {
+    color: #141418;
+    background: #9f5010;
+    border-radius: 30px;
+}
+
+/* ------------------'hello'------Hello game*/
+
+.hello-result-box {
+    width: 85%;
+    margin: 2rem 1rem;
+}
+
+.hello-result-box h2, .hello-result-box label{
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+}
+
+.hello-result-box span,.hello-result-box input{
+    width: 100%;
+    border: none;
+    height: 30px;
+    font-size: 1.5rem;
+    font-style: italic;
+    padding: .5rem 1rem;
+    display: block;
+    border-radius: 10px;
+    background: #f5ddc7;
+}
+
+.hello-result-box input {
+ color: #9f5010;
+    font-family: 'Playfair Display', serif;
+}
+
+.hello-result-box .hello-submit {
+    width: 100px;
+    height: 30px;
+    font-size: 1rem;
+    color: #f5ddc7;
+    background: #141418;
+    border: #141418 1px solid;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+/* La box non construite*/
+
+.box-inactive {
+    background: #9f5010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-inactive h2 {
+    display: block;
+    width: 80%;
+    font-size: 3rem;
+    color: #f5ddc7;
+}
+
+.box-inactive:hover {
+    animation-duration: 1.2s;
+    animation-name: bounce-top;
+    animation-iteration-count: infinite;
+    -webkit-animation-duration: 1.2s;
+    -webkit-animation-name: bounce-top;
+    -webkit-animation-iteration-count: infinite;
+}
+
+.box-inactive h2 span {
+    color: #f7ede5;
+    text-decoration: underline dotted;
+    text-decoration-color: #141418;
+    text-decoration-thickness: 7px;
+    text-underline-offset: 0.5rem;
+}
+
+@-webkit-keyframes bounce-top {
+    0% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-10px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    40% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    65% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    82% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    93% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+}
+@keyframes bounce-top {
+    0% {
+        -webkit-transform: translateY(-20px);
+        transform: translateY(-10px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    40% {
+        -webkit-transform: translateY(-10px);
+        transform: translateY(-10px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    65% {
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    82% {
+        -webkit-transform: translateY(-3px);
+        transform: translateY(-3px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    93% {
+        -webkit-transform: translateY(-2px);
+        transform: translateY(-2px);
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+    }
+    25%,
+    55%,
+    75%,
+    87% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+    }
+    100% {
+        -webkit-transform: translateY(0px);
+        transform: translateY(0px);
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+
+    }
+}
