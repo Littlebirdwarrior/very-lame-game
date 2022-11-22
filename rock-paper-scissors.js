@@ -29,29 +29,25 @@ function generateComputerChoice(){
 }
 
 function getResult() {
+    const win = (rpsComputerChoice === 'rock' && rpsUserChoice === 'paper')|| //paper
+        (rpsComputerChoice === 'paper' && rpsUserChoice === 'scissors')|| //scissors
+        (rpsComputerChoice === 'scissors' && rpsUserChoice === 'rock');  //rock
+
+    const lose = (rpsComputerChoice === 'rock' && rpsUserChoice === 'scissors')|| //scissors
+        (rpsComputerChoice === 'paper' && rpsUserChoice === 'rock') ||//rock
+        (rpsComputerChoice === 'scissors' && rpsUserChoice === 'paper') //paper
+
+    //match null
     if (rpsComputerChoice === rpsUserChoice) {
-        rpsResult = 'its a draw!'
+        rpsResult = 'Its a draw!'
     }
-    //rock
-    if (rpsComputerChoice === 'rock' && rpsUserChoice === 'paper') {
-        rpsResult = 'you win!'
+    //cas gagnant
+    if (win) {
+        rpsResult = 'You win!'
     }
-    if (rpsComputerChoice === 'rock' && rpsUserChoice === 'scissors') {
-        rpsResult = 'you lose!'
-    }
-    //paper
-    if (rpsComputerChoice === 'paper' && rpsUserChoice === 'rock') {
-        rpsResult= 'you win!'
-    }
-    if (rpsComputerChoice === 'paper' && rpsUserChoice === 'scissors') {
-        rpsResult = 'you lose!'
-    }
-    //scissors
-    if (rpsComputerChoice === 'scissors' && rpsUserChoice === 'paper') {
-        rpsResult = 'you win!'
-    }
-    if (rpsComputerChoice === 'scissors' && rpsUserChoice === 'rock') {
-        rpsResult = 'you lose!'
+    //cas perdant
+    if (lose) {
+        rpsResult = 'You lose!'
     }
     rpsResultChoiceDisplay.innerHTML = rpsResult
 }
