@@ -1,5 +1,5 @@
 const containOnlySpaces = /\s/g
-const containNumber = /^[\w\d]{1,10}$/g
+const containNumber = /^[\d]{1,10}$/g
 const containOnlyLetters = /^[a-z-A-Z-àÀçÇéÉèÈïÏöÖùÙüÜ]{1,10}$/g
 const toLong = /^[\w\d\W\D]{11,}$/g
 const containSpecial = /[&@\-!+$%€*_°]/g
