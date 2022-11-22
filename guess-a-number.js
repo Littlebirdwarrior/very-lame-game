@@ -1,7 +1,10 @@
 
+/*Je génère un chiffre aléatoire*/
+const tresor = Math.floor(Math.random() * 11)
+console.log(tresor)
 
 function getChiffreUser() {
-    let chiffreUser = (document.getElementById("gan-input").value) * 1;
+    let chiffreUser = (document.getElementById("gan-input").value) * 1; //convertir ma string en number
     console.log(chiffreUser)
     //mes autres fonctions
     removeClassActif()
@@ -10,7 +13,6 @@ function getChiffreUser() {
 
 
 function verifyChiffreUser(chiffreUser) {
-    const tresor = Math.floor(Math.random() * 11)
     if (chiffreUser <= 0 || chiffreUser > 10) {
         console.log('ce n\'est pas compris entre 1 et 10')
         let foolButton = document.getElementById('fool')
