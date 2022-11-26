@@ -297,6 +297,34 @@ header, footer {
     margin-top: 10px;
 }
 
+/*La box Memory*/
+
+.memory-grid {
+    width: 380px;
+    height: 250px;
+    margin : 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.memory-grid > div {
+    width: 120px;
+    height: 125px;
+    margin: 2px;
+    background: aquamarine;
+    border: solid 1px #000;
+}
+
+.memory-score > p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-left: 3%;
+}
+
+.memory-score > p > span {
+    font-weight: normal;
+}
+
 /* La box non construite*/
 
 .box-inactive {
